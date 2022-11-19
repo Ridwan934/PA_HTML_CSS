@@ -1,0 +1,10 @@
+#navbar .container {
+  text: poppins;
+}
+.container {
+  padding: 10px 30px;
+  font-family: poppins;
+}
+#hero .container .achieve {
+  weigth: 700px;
+}
