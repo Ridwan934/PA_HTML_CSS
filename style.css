@@ -1,5 +1,7 @@
 #navbar .container {
   text: poppins;
+  margin-left: auto;
+  margin-right: auto;
 }
 .container {
   padding: 10px 30px;

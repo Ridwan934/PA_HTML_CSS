@@ -24,6 +24,7 @@
             }
         }
     </script>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css" />
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
@@ -31,33 +32,48 @@
 </head>
 
 <body>
-    <section id="navbar" class=" ">
-        <div class="container  flex bg-gradient-to-r from-[#474747] to-[#222222] w-full justify-between ">
+    <section id="navbar" class="fixed top-0 w-screen z-50">
+        <button data-collapse-toggle="navbar-defaults" type="button"
+            class="absolute top-0 right-0 inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-defaults" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                    clip-rule="evenodd">
+                </path>
+            </svg>
+        </button>
+        <div class="container flex bg-gradient-to-r from-[#474747] to-[#222222] justify-between ">
             <div class="Nama flex  flex-col text-white">
                 General <span class="text-[blue] text-[24px] font-[700px]">Project</span>
             </div>
-            <div class="nav">
-                <ul class="flex gap-10 text-white justify-around">
-                    <li class="text-[18px] font-[700px]">Home</li>
-                    <li>Service</li>
-                    <li>Find a Team</li>
-                    <li>About Us</li>
-                    <li>Articles</li>
-                    <li>Portofolio</li>
-                    <li>Contact Us</li>
-                </ul>
+            <div id="navbar-defaults" class="hidden lg:block w-full">
+                <div class="menu-navigation flex items-center justify-between  md:flex-wrap">
+                    <ul class="flex flex-col gap-10 text-white justify-around lg:flex-row">
+                        <li class="text-[18px] font-[700px]">Home</li>
+                        <li>Service</li>
+                        <li>Find a Team</li>
+                        <li>About Us</li>
+                        <li>Articles</li>
+                        <li>Portofolio</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
             </div>
         </div>
+
     </section>
     <section id="hero">
         <div
-            class="container text-white bg-gradient-to-r from-[#474747] to-[#222222] pt-[25px] flex justify-between pr-0 pb-0">
-            <div class=" flex flex-col gap-10">
-                <div class="teks">
-                    <h1 class=" text-[55px] w-[650px] font-[600px]">
+            class="container text-white bg-gradient-to-r from-[#474747] to-[#222222] pt-[25px] flex justify-between pr-0 pb-0 flex-wrap-reverse lg:flex-nowrap lg:pt-[70px]">
+            <div class=" flex flex-col gap-10 ">
+                <div class="teks flex flex-col lg:flex-none">
+                    <h1 class=" text-[55px] lg:w-[650px] font-[600px] flex flex-wrap lg:flex-none">
                         We Provide Architectural Design and Contruction
                     </h1>
-                    <p class="mt-[24px] w-[500px] text-[18px] gap-y-5">
+                    <p class="mt-[24px] lg:w-[500px] text-[18px] gap-y-5 flex flex-wrap lg:flex-none">
                         ​More than 100 building and housing projects that we have built.
                         The building owner chose us over other contractors in Jakarta,
                         because our work is different
@@ -66,7 +82,7 @@
                 <div class="btn bg-gradient-to-r from-[#60BBEE] to-[#0A72AD] w-fit p-5 rounded-md ]">
                     <button class=""> Discover More</button>
                 </div>
-                <div class="achieve flex flex-row gap-10">
+                <div class="achieve flex lg:flex-row lg:gap-10 flex-wrap gap-2">
                     <div>
                         <div class="text-[36px] font-[700px]">
                             300<span class="text-blue-400 ">+</span>
@@ -93,10 +109,11 @@
                     </div>
                 </div>
             </div>
-            <div class="overflow-hidden">
-                <img src="./Images/joel-filipe-RFDP7_80v5A-unsplash (1) 1.png" alt="" class=" lg:h-full lg:w-full ">
-                <div class="project flex gap-3 justify-around mb-0 mr-0 text-white  columns-3 bg-gradient-to-r from-[#399FD8] to-[#0775B4 ] to-[#003756]   w-[600px] h-[150px] lg:w-full -my-32  relative lg:h-full align-middle pl-3
-                ">
+            <div class="lg:overflow-hidden">
+                <img src="./Images/joel-filipe-RFDP7_80v5A-unsplash (1) 1.png" alt=""
+                    class=" lg:h-full lg:w-full object-cover ">
+                <div class="project flex gap-3 justify-around mb-0 mr-0 text-white  columns-3 bg-gradient-to-r from-[#399FD8] to-[#0775B4 ] to-[#003756]   lg:w-[600px] lg:h-[150px]  -my-32  relative lg:h-full align-middle pl-3
+                flex-wrap-reverse lg:flex-nowrap ">
                     <div class="flex flex-col">
                         General <span class="font-[600px] text-[24px]">Project</span>
                     </div>
@@ -109,7 +126,7 @@
                             <span class="font-[600px] text-[24px]">Operated</span>
                         </div>
                     </div>
-                    <div class="9">
+                    <div class="">
                         As a trusted general project that has been
                         operating for 25 years, our commitment is
                         always to prioritize our client satisfaction
@@ -121,7 +138,7 @@
     </section>
     <section class="brand">
         <div class="container py-5">
-            <div class="1 flex justify-between object-contain">
+            <div class="1 flex justify-between object-contain flex-wrap-reverse lg:flex-nowrap">
                 <img src="./Images/logo-ADMF-background-putih 1.png" alt="">
                 <img src="./Images/logo__1626691788 1.png" alt="">
                 <img src="./Images/1280px-Holcim_logo 1.png" alt="">
@@ -132,7 +149,7 @@
     </section>
     <section class="Our">
         <div class="container">
-            <div class="flex justify-around w-full">
+            <div class="flex justify-between w-full flex-wrap lg:flex-nowrap">
                 <h1 class="font-[600px] text-[46px]  w-[300px]">
                     Our Excelent Services
                 </h1>
@@ -142,15 +159,11 @@
                     customer service if you are interested in using our services
                 </p>
             </div>
-            <div class="gmbr flex  justify-between">
 
-
-
-            </div>
-            <div class="ket w-full flex justify-between ">
-                <div>
+            <div class="ket w-full flex justify-between flex-wrap lg:flex-nowrap">
+                <div class="lg:w-1/3">
                     <img src="./Images/pexels-pixabay-209251.png" alt="">
-                    <h2 class="font-bold mt-5">
+                    <h2 class="font-bold mt-5 object-contain">
                         Industrial
                     </h2>
                     <p>
@@ -159,9 +172,9 @@
                         Construction, Warehouse and others
                     </p>
                 </div>
-                <div>
+                <div class="lg:w-1/3">
                     <img src="./Images/pexels-alesia-kozik-6016680 1.png" alt="">
-                    <h2 class="font-bold mt-5">
+                    <h2 class="font-bold mt-5 object-contain">
                         Comercial
                     </h2>
                     <p>
@@ -170,12 +183,12 @@
                         Supermalls and Office Buildings
                     </p>
                 </div>
-                <div>
+                <div class="lg:w-1/3">
                     <img src="./Images/pexels-tobias-bjørkli-2119714 1.png" alt="">
-                    <h2 class="font-bold mt-5">
+                    <h2 class="font-bold mt-5 object-contain">
                         Residential
                     </h2>
-                    <p>
+                    <p class="">
                         Residential development is the
                         beginning that has shaped us to this
                         day. Our development includes
@@ -186,7 +199,7 @@
         </div>
     </section>
     <section class="what">
-        <div class="container">
+        <div class="container flex flex-wrap lg:flex-none ">
             <div class="jdl">
                 <div class="garis bg-gradient-to-r from-[#60BBEE] to-[#2387C0] h-[9px] w-[90px]">
                 </div>
@@ -199,10 +212,10 @@
                     customer service if you are interested in using our services
                 </p>
             </div>
-            <div class="gb flex mt-10">
-                <div class="card1">
+            <div class="flex flex-wrap lg:flex-nowrap gap-5 pt-5">
+                <div class="card1 ">
                     <div class="ring-[10px] ring-blue-300 bg-blue-600 rounded-full h-12 w-12 flex justify-center">
-                        <img src="./Images/Vector (1).png" alt="" class="self-center ">
+                        <img src="./Images/Vector.png" alt="" class="self-center">
                     </div>
 
                     <h3 class="font-[600px] text-[24px] mt-4">
@@ -217,17 +230,18 @@
                 </div>
                 <div class="card1 ">
                     <div class="ring-[10px] ring-blue-300 bg-blue-600 rounded-full h-12 w-12 flex justify-center">
-                        <img src="./Images/Vector (1).png" alt="" class="self-center">
+                        <img src="./Images/Vectorrr.png" alt="" class="self-center">
                     </div>
 
                     <h3 class="font-[600px] text-[24px] mt-4">
-                        Experienced
+                        Competitive Price
                     </h3>
                     <p>
-                        Our experience of 25 years of
-                        building and making
-                        achievements in the world
-                        of development
+                        The prices we offer you are
+                        very competitive without
+                        reducing the quality of the
+                        company's work in the
+                        slightest
                     </p>
                 </div>
                 <div class="card1 ">
@@ -236,51 +250,91 @@
                     </div>
 
                     <h3 class="font-[600px] text-[24px] mt-4">
-                        Experienced
+                        On Time
                     </h3>
                     <p>
-                        Our experience of 25 years of
-                        building and making
-                        achievements in the world
-                        of development
+                        We prioritize the quality of
+                        our work and finish it on time
                     </p>
                 </div>
                 <div class="card1 ">
                     <div class="ring-[10px] ring-blue-300 bg-blue-600 rounded-full h-12 w-12 flex justify-center">
-                        <img src="./Images/Vector (1).png" alt="" class="self-center">
+                        <img src="./Images/Vectorrrrrrrr.png" alt="" class="self-center">
                     </div>
 
                     <h3 class="font-[600px] text-[24px] mt-4">
-                        Experienced
+                        Best materials
                     </h3>
                     <p>
-                        Our experience of 25 years of
-                        building and making
-                        achievements in the world
-                        of development
+                        The material determines the
+                        building itself so we
+                        recommend that you use
+                        the best & quality materials
+                        in its class.
                     </p>
                 </div>
             </div>
         </div>
+        </div>
     </section>
-    <section id="footer ">
-        <div class="container flex w-full bg-gradient-to-r from-[#474747] to-[#222222] rounded-md  text-white">
+    <section id="footer " class="lg:relative flex flex-col  justify-center items-center ">
+        <div
+            class="container1 text-white flex flex-wrap lg:flex-nowrap  bg-gradient-to-r from-[#474747] to-[#222222] lg:w-[835px] lg:h-[450px] lg:absolute lg:top-[50px] lg:gap-52">
+            <div class="a lg:relative">
+                <div class="">
+                    <img src="./Images/unsplash_6anudmpILw4.png" alt=""
+                        class="object-contain  lg:w-[350px] lg:h-[430px] lg:pl-[40px]">
+                </div>
+                <div
+                    class="flex flex-col justify-center object-contain items-center lg:absolute lg:w-[263px] lg:top-60 lg:left-20 z-50">
+                    <img src="./Images/Vector (2).png" alt=""
+                        class="ring-[10px] ring-white bg-white rounded-full w-[10px] z-50">
+                    <div class="t  bg-white text-black justify-center items-center flex flex-col lg:w-[200px]">
+                        <h2 class="font-[600px] text-[22px]">Jacob Molen</h2>
+                        <p class="font-[400px] text-[13px]">
+                            We like the final result this project,
+                            in extraordinary and also provides
+                            the best service to the client
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="b lg:mt-10 ">
+                <div class="text-white">
+                    <h2 class="text-[36px] font-[600px]">
+                        What we have done &
+                        what our Customers say
+                    </h2>
+                    <p class="mt-5">
+                        We are to help you build a excellent build, with
+                        us nothing is impossible. See what we have done
+                        and what they have to say about our work perform.
+                    </p>
+                </div>
+                <div class="flex mt-10 gap-5 justify-end mr-3">
+                    <img src="./Images/Vector_arrow-l.png" alt="">
+                    <img src="./Images/Vector-arrow-r.png" alt="" class="bg-blue-400">
+                </div>
+            </div>
+        </div>
+        <div
+            class="container flex flex-wrap lg:flex-nowrap w-full bg-gradient-to-r from-[#474747] to-[#222222] rounded-md  text-white lg:pt-72 lg:mt-72 ">
             <div class="a w-[50%]">
-                <div>
+                <div class="font-bold text-[16px]">
                     General Project
                 </div>
-                <div class="d">
+                <div class="d mt-3">
                     Is a general contractor company based in Jakarta. More than 25 years of experience in building and
                     carving out Indonesia's development.
                 </div>
-                <div class="flex">
+                <div class="flex gap-[19px] mt-3">
                     <img src="./Images/Icon (1).png" alt="">
                     <img src="./Images/Icon.png" alt="">
                     <img src="./Images/Icon (2).png" alt="">
                     <img src="./Images/Icon (3).png" alt="">
                 </div>
             </div>
-            <div class="b flex gap-5 w-[50%] justify-around ">
+            <div class="b flex gap-5 w-[50%] justify-around flex-wrap lg:flex-nowrap">
                 <div>
                     <h3 class="">
                         Company
@@ -305,9 +359,9 @@
                     </ul>
                 </div>
             </div>
-
         </div>
     </section>
+    <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
 </body>
 
 </html>
